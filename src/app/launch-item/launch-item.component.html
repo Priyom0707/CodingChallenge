@@ -1,0 +1,16 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <p>
+      <strong>Mission Name : {{ launch.mission_name }}</strong>
+    </p>
+  </mat-expansion-panel-header>
+  <mat-panel-description *ngIf="selectedLaunch != null">
+    <p><strong>Launch Id :</strong> {{ launch.id }}</p>
+    <p><strong>Rocket Name:</strong> {{ selectedLaunch.rocket.rocket_name }}</p>
+    <p>
+      <strong>Launch Time:</strong>
+      {{ selectedLaunch.launch_date_utc }}
+    </p>
+  </mat-panel-description>
+</mat-expansion-panel>
+<!-- | date : "short" -->

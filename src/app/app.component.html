@@ -1,0 +1,15 @@
+<div class="app-container">
+  <h1>Next launches of a SpaceX</h1>
+
+  <mat-accordion multi="false">
+    <!-- multi="false" enables user to expand only one item at a time -->
+    <app-launch-item
+      *ngFor="let launch of launches"
+      [launch]="launch"
+      [selectedLaunch]="selectedLaunch"
+      [expanded]="openedLaunchId === launch.id"
+      (click)="onToggleLaunch(launch.id)"
+    >
+    </app-launch-item>
+  </mat-accordion>
+</div>
